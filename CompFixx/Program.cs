@@ -48,6 +48,23 @@ namespace CompFixx
                 Console.WriteLine("Responsável: ");
                 pessoa.responsavel = Console.ReadLine();
             }
+            else
+            {
+                Fisica pessoa = new Fisica();
+                Console.WriteLine("Digite o nome do cliente: ");
+                pessoa.nomePessoa = Console.ReadLine();
+                Console.WriteLine(pessoa.nomePessoa);
+                Console.WriteLine("Digite o numero do cliente: ");
+                pessoa.numeroPessoa = Console.ReadLine();
+                Console.WriteLine("Digite o endereço do cliente: ");
+                pessoa.enderecoPessoa = Console.ReadLine();
+                Console.WriteLine("Digite a idade do cliente: ");
+                pessoa.idade = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Digite o rg do cliente: ");
+                pessoa.rg = Console.ReadLine();
+                Console.WriteLine("Nacionalidade do cliente: ");
+                pessoa.nacionalidade = Console.ReadLine();
+            }
 
             //  CriarArquivo();
             Console.ReadKey();
