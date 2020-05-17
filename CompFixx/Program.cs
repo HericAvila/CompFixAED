@@ -1,4 +1,4 @@
-﻿using CompFixx.Arquivo;
+﻿
 using CompFixx.Models;
 using System;
 using System.Collections.Generic;
@@ -83,7 +83,7 @@ namespace CompFixx
             //Adicionando dados dos dispositivos
             switch (r)
             {
-                case "d"
+                case "d":
                     Console.WriteLine("Informe se é Celular-Tablet (ct) ou SmartWatch (sw): ");
                     d = Console.ReadLine();
                     while ((d != "ct") && (d != "sw"))
@@ -93,11 +93,37 @@ namespace CompFixx
                     }
                     if (d == "ct")
                     {
-                        Celular_tablet DM = new Celular_tablet();
+                        Celular_tablet dispositivo = new Celular_tablet();
+                        Console.WriteLine("Precisa de concerto de tela? (sim/nao) ");
+                        r = Console.ReadLine();
+                        while ((r != "sim") && (r != "nao"))
+                        {
+                            Console.WriteLine("Valor inválido, digite novamente ");
+                            r = Console.ReadLine();
+                        }
+                        if (r == "sim") { dispositivo.tela = true; }
+                        else { dispositivo.tela = false; }
+                        Console.WriteLine("Sistema operacional do dispositivo: ");
+                        dispositivo.sistemaOperacional = Console.ReadLine();
+                        Console.WriteLine("Marca do dispositivo:");
+                        dispositivo.marca = Console.ReadLine();
+                        Console.WriteLine("Chip estragado? (sim/nao) ");
+                        r = Console.ReadLine();
+                        while ((r != "sim") && (r != "nao"))
+                        {
+                            Console.WriteLine("Valor inválido, digite novamente ");
+                            r = Console.ReadLine();
+                        }
+                        if (r == "sim") { dispositivo.chip = true; }
+                        else { dispositivo.chip = false; }
+                        Console.WriteLine("Tipo entrada:");
+                        dispositivo.tipoEntrada = Console.ReadLine();
                     }
+                    if ()
                     break;
-                default
+                default:
                     Console.WriteLine("Valor inválido");
+                    break;
 
 
             }
