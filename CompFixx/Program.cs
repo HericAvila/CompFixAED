@@ -13,6 +13,15 @@ namespace CompFixx
        
         static void Main(string[] args)
         {
+            string r;
+            Console.WriteLine("Informe se o cliente é pessoa fisica ou juridica: ");
+            r = Console.ReadLine();
+            while((r != "fisica") && (r != "juridica"))
+            {
+                Console.WriteLine("valor inválido, digite novamente: ");
+                r = Console.ReadLine();
+            }
+
            //  CriarArquivo();
         }
     }
