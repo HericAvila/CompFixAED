@@ -119,7 +119,10 @@ namespace CompFixx
                         Console.WriteLine("Tipo entrada:");
                         dispositivo.tipoEntrada = Console.ReadLine();
                     }
-                    if ()
+                    if (d == "sw")
+                    {
+                        SmartWatch smartwatch = new SmartWatch();
+                    }
                     break;
                 default:
                     Console.WriteLine("Valor inválido");
