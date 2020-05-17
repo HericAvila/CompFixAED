@@ -102,7 +102,6 @@ namespace CompFixx
                 Console.WriteLine("Nacionalidade do cliente: ");
                 pessoa.nacionalidade = Console.ReadLine();
                 ArquivoPessoa.addText("Nacionalidade: " + pessoa.nacionalidade);
-                precoFinal = precoFinal - 5;
 
             }
 
@@ -159,7 +158,18 @@ namespace CompFixx
                         Console.WriteLine("Tipo entrada:");
                         dispositivo.tipoEntrada = Console.ReadLine();
                         ArquivoPessoa.addText("Tipo de entrada: "+dispositivo.tipoEntrada);
+                        if ((dispositivo.sistemaOperacional == "ios") && (dispositivo.tela == true))
+                        {
+                            precoFinal += 800;
+                        }
+                        else { precoFinal += 500; }
+                        if ((dispositivo.sistemaOperacional == "ios") && (dispositivo.chip == true))
+                        {
+                            precoFinal += 50;
+                        }
+                        else { precoFinal += 25; }
                     }
+           
                     if (d == "sw")
                     {
                         SmartWatch smartwatch = new SmartWatch();
@@ -184,6 +194,17 @@ namespace CompFixx
                         }
                         if (r == "sim") { smartwatch.leitorBiometrio = true; ArquivoPessoa.addText("Precisa de conserto de Leitor Biometrico: sim"); }
                         else { smartwatch.leitorBiometrio = false; ArquivoPessoa.addText("Precisa de conserto de leitor biometrico: nao"); }
+                        if ((smartwatch.sistemaOperacional == "ios") && (smartwatch.tela == true))
+                        {
+                            precoFinal += 300;
+                        }
+                        else { precoFinal += 200; }
+                        if ((smartwatch.sistemaOperacional == "ios") && (smartwatch.leitorBiometrio == true))
+                        {
+                            precoFinal += 200;
+                        }
+                        else { precoFinal += 70; }
+
                     }
                     Console.WriteLine(" Obrigado, Retornamos com o valor. ");
                     break;
@@ -233,6 +254,14 @@ namespace CompFixx
                         computador.placaM = Console.ReadLine();
                         ArquivoPessoa.addText("Modelo da placa mae: "+computador.placaM);
                         Console.WriteLine(" Obrigado, Retornamos com o valor. ");
+                        if(computador.oxidacao == true)
+                        {
+                            precoFinal += 200;
+                        }
+                        if(computador.leitorOptico == true)
+                        {
+                            precoFinal += 100;
+                        }
                     }
                     if (d == "nb")
                     {
@@ -271,6 +300,14 @@ namespace CompFixx
                         Console.WriteLine("Marca do notebook:");
                         notebook.marca = Console.ReadLine();
                         ArquivoPessoa.addText("Marca do notebook: "+notebook.marca);
+                        if (notebook.oxidacao == true)
+                        {
+                            precoFinal += 300;
+                        }
+                        if (notebook.bateria == true)
+                        {
+                            precoFinal += 150;
+                        }
                     }
                     Console.WriteLine(" Obrigado, Retornamos com o valor. ");
                     break;
@@ -283,13 +320,17 @@ namespace CompFixx
                     monitor.tamanhoTela = double.Parse(Console.ReadLine());
                     ArquivoPessoa.addText("Tamanho do monitor: " + monitor.tamanhoTela);
                     Console.WriteLine(" Obrigado, Retornamos com o valor. ");
+                    precoFinal += 600;
                     break;
                 default:
                     Console.WriteLine("Valor inválido");
                     break;
-
-
             }
+            if(precoFinal == 0)
+            {
+                Console.WriteLine("Desculpe, mas parece que não podemos resolver seu problema");
+            }
+            Console.WriteLine("Preço Final = " + precoFinal);
             Console.ReadKey();
         }
     }
