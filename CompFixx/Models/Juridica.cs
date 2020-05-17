@@ -11,7 +11,7 @@ namespace CompFixx.Models
     {
         public string razaoSocial { get; set; }
         public string cnae { get; set; }
-        public bool nacionalidade { get; set; }
+        public bool multinacional { get; set; }
         public string tipoEmpresa { get; set; }
         public string responsavel { get; set; }
 
