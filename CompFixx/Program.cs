@@ -3,6 +3,7 @@ using CompFixx.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -67,6 +68,34 @@ namespace CompFixx
             }
 
             //  CriarArquivo();
+            string d;
+            Console.WriteLine("Aparelho para concerto: Dispositivo Móvel (d) , Computador (c) ou Monitor (m): ");
+            r = Console.ReadLine();
+            while ((r != "d") && (r != "c") && (r != "m"))
+            {
+                Console.WriteLine("Valor inválido, digite novamente ");
+                r = Console.ReadLine();
+            }
+            switch (r)
+            {
+                case "d"
+                    Console.WriteLine("Informe se é Celular-Tablet (ct) ou SmartWatch (sw): ");
+                    d = Console.ReadLine();
+                    while ((d != "ct") && (d != "sw"))
+                    {
+                        Console.WriteLine("Valor inválido, digite novamente ");
+                        r = Console.ReadLine();
+                    }
+                    if (d == "ct")
+                    {
+                        Celular_tablet DM = new Celular_tablet();
+                    }
+                    break;
+                default
+                    Console.WriteLine("Valor inválido");
+
+
+            }
             Console.ReadKey();
         }
     }
