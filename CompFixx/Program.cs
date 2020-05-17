@@ -57,7 +57,7 @@ namespace CompFixx
                 Fisica pessoa = new Fisica();
                 Console.WriteLine("Digite o nome do cliente: ");
                 pessoa.nomePessoa = Console.ReadLine();
-                Console.WriteLine(pessoa.nomePessoa);
+                //Console.WriteLine(pessoa.nomePessoa);
                 Console.WriteLine("Digite o numero do cliente: ");
                 pessoa.numeroPessoa = Console.ReadLine();
                 Console.WriteLine("Digite o endereço do cliente: ");
@@ -143,6 +143,7 @@ namespace CompFixx
                         if (r == "sim") { smartwatch.leitorBiometrio = true; }
                         else { smartwatch.leitorBiometrio = false; }
                     }
+                    Console.WriteLine(" Obrigado, Retornanamos com o valor. ");
                     break;
                 case "c":
                     Console.WriteLine("Informe se é PC (pc) ou noteboook (nb): ");
@@ -183,6 +184,7 @@ namespace CompFixx
                         else { computador.leitorOptico = false; }
                         Console.WriteLine("Modelo da placa mãe:");
                         computador.placaM = Console.ReadLine();
+                        Console.WriteLine(" Obrigado, Retornanamos com o valor. ");
                     }
                     if (d == "nb")
                     {
@@ -216,6 +218,7 @@ namespace CompFixx
                         Console.WriteLine("Marca do notebook:");
                         notebook.marca = Console.ReadLine();
                     }
+                    Console.WriteLine(" Obrigado, Retornanamos com o valor. ");
                     break;
                 case "m":
                     Monitor monitor = new Monitor();
@@ -223,6 +226,7 @@ namespace CompFixx
                     monitor.tipo = Console.ReadLine();
                     Console.WriteLine("Tamanho da tela:");
                     monitor.tamanhoTela = double.Parse(Console.ReadLine());
+                    Console.WriteLine(" Obrigado, Retornanamos com o valor. ");
                     break;
                 default:
                     Console.WriteLine("Valor inválido");
