@@ -1,4 +1,5 @@
 ﻿
+using CompFixx.Arquivo;
 using CompFixx.Models;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace CompFixx
        
         static void Main(string[] args)
         {
+            ArquivoPessoa.criar();
             //identificando tipo de pessoa
             string r;
             Console.WriteLine("Informe se o cliente é pessoa fisica ou juridica: ");
@@ -22,21 +24,34 @@ namespace CompFixx
             {
                 Console.WriteLine("valor inválido, digite novamente: ");
                 r = Console.ReadLine();
+               
             }
 
             //Adicionando dados da pessoa
             if (r == "juridica"){
                 Juridica pessoa = new Juridica();
-                Console.WriteLine("Digite o nome do cliente: ");
+
+                Console.WriteLine("Digite o nome do cliente: "); 
                 pessoa.nomePessoa = Console.ReadLine();
+                ArquivoPessoa.addText(pessoa.nomePessoa);
+
+
                 Console.WriteLine("Digite o numero do cliente: ");
                 pessoa.numeroPessoa = Console.ReadLine();
+                ArquivoPessoa.addText(pessoa.numeroPessoa);
+
                 Console.WriteLine("Digite o endereço do cliente: ");
                 pessoa.enderecoPessoa = Console.ReadLine();
+                ArquivoPessoa.addText(pessoa.enderecoPessoa);
+
                 Console.WriteLine("Razão social: ");
                 pessoa.razaoSocial = Console.ReadLine();
+                ArquivoPessoa.addText(pessoa.razaoSocial);
+
                 Console.WriteLine("CNAE: ");
                 pessoa.cnae = Console.ReadLine();
+                ArquivoPessoa.addText(pessoa.cnae);
+
                 Console.WriteLine("A empresa é uma multinacional? (sim/nao) ");
                 r= Console.ReadLine();
                 while ((r != "sim") && (r != "nao"))
@@ -46,17 +61,21 @@ namespace CompFixx
                 }
                 if (r == "sim") { pessoa.multinacional = true; }
                 else { pessoa.multinacional = false; }
+
                 Console.WriteLine("Informe o tipo de empresa: ");
                 pessoa.tipoEmpresa = Console.ReadLine();
+                ArquivoPessoa.addText(pessoa.tipoEmpresa);
+
                 Console.WriteLine("Responsável: ");
-                pessoa.responsavel = Console.ReadLine();
+                pessoa.responsavel = ("Responsavel: "+Console.ReadLine());
+                ArquivoPessoa.addText(pessoa.responsavel);
             }
             else
             {
                 Fisica pessoa = new Fisica();
                 Console.WriteLine("Digite o nome do cliente: ");
                 pessoa.nomePessoa = Console.ReadLine();
-                Console.WriteLine(pessoa.nomePessoa);
+                //Console.WriteLine(pessoa.nomePessoa);
                 Console.WriteLine("Digite o numero do cliente: ");
                 pessoa.numeroPessoa = Console.ReadLine();
                 Console.WriteLine("Digite o endereço do cliente: ");
@@ -142,6 +161,7 @@ namespace CompFixx
                         if (r == "sim") { smartwatch.leitorBiometrio = true; }
                         else { smartwatch.leitorBiometrio = false; }
                     }
+                    Console.WriteLine(" Obrigado, Retornanamos com o valor. ");
                     break;
                 case "c":
                     Console.WriteLine("Informe se é PC (pc) ou noteboook (nb): ");
@@ -182,6 +202,7 @@ namespace CompFixx
                         else { computador.leitorOptico = false; }
                         Console.WriteLine("Modelo da placa mãe:");
                         computador.placaM = Console.ReadLine();
+                        Console.WriteLine(" Obrigado, Retornanamos com o valor. ");
                     }
                     if (d == "nb")
                     {
@@ -215,6 +236,7 @@ namespace CompFixx
                         Console.WriteLine("Marca do notebook:");
                         notebook.marca = Console.ReadLine();
                     }
+                    Console.WriteLine(" Obrigado, Retornanamos com o valor. ");
                     break;
                 case "m":
                     Monitor monitor = new Monitor();
@@ -222,6 +244,7 @@ namespace CompFixx
                     monitor.tipo = Console.ReadLine();
                     Console.WriteLine("Tamanho da tela:");
                     monitor.tamanhoTela = double.Parse(Console.ReadLine());
+                    Console.WriteLine(" Obrigado, Retornanamos com o valor. ");
                     break;
                 default:
                     Console.WriteLine("Valor inválido");
