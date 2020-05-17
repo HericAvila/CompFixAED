@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arquivo\ArquivoPessoa.cs" />
+    <Compile Include="Arquivo\Leitura.cs" />
     <Compile Include="Models\Celular-tablet.cs" />
     <Compile Include="Models\Dispositivo Movel.cs" />
     <Compile Include="Models\Fisica.cs" />
