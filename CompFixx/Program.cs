@@ -14,6 +14,7 @@ namespace CompFixx
        
         static void Main(string[] args)
         {
+            //identificando tipo de pessoa
             string r;
             Console.WriteLine("Informe se o cliente é pessoa fisica ou juridica: ");
             r = Console.ReadLine();
@@ -22,6 +23,8 @@ namespace CompFixx
                 Console.WriteLine("valor inválido, digite novamente: ");
                 r = Console.ReadLine();
             }
+
+            //Adicionando dados da pessoa
             if (r == "juridica"){
                 Juridica pessoa = new Juridica();
                 Console.WriteLine("Digite o nome do cliente: ");
@@ -67,7 +70,7 @@ namespace CompFixx
                 pessoa.nacionalidade = Console.ReadLine();
             }
 
-            //  CriarArquivo();
+            //Identificando dispositivo
             string d;
             Console.WriteLine("Aparelho para concerto: Dispositivo Móvel (d) , Computador (c) ou Monitor (m): ");
             r = Console.ReadLine();
@@ -76,6 +79,8 @@ namespace CompFixx
                 Console.WriteLine("Valor inválido, digite novamente ");
                 r = Console.ReadLine();
             }
+
+            //Adicionando dados dos dispositivos
             switch (r)
             {
                 case "d"
