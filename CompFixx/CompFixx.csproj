@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arquivo\CriarArquivo.cs" />
+    <Compile Include="Arquivo\ArquivoPessoa.cs" />
     <Compile Include="Models\Celular-tablet.cs" />
     <Compile Include="Models\Dispositivo Movel.cs" />
     <Compile Include="Models\Fisica.cs" />
@@ -60,5 +60,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
