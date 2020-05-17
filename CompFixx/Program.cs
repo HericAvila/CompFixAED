@@ -29,7 +29,6 @@ namespace CompFixx
                 Juridica pessoa = new Juridica();
                 Console.WriteLine("Digite o nome do cliente: ");
                 pessoa.nomePessoa = Console.ReadLine();
-                Console.WriteLine(pessoa.nomePessoa);
                 Console.WriteLine("Digite o numero do cliente: ");
                 pessoa.numeroPessoa = Console.ReadLine();
                 Console.WriteLine("Digite o endereço do cliente: ");
