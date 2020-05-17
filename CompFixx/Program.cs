@@ -50,7 +50,7 @@ namespace CompFixx
 
                 Console.WriteLine("CNAE: ");
                 pessoa.cnae = Console.ReadLine();
-                ArquivoPessoa.addText(pessoa.cnae);
+                ArquivoPessoa.addText(pessoa.cnae+"\n Multinacional: ");
 
                 Console.WriteLine("A empresa é uma multinacional? (sim/nao) ");
                 r= Console.ReadLine();
@@ -59,8 +59,14 @@ namespace CompFixx
                     Console.WriteLine("Valor inválido, digite novamente ");
                     r = Console.ReadLine();
                 }
-                if (r == "sim") { pessoa.multinacional = true; }
-                else { pessoa.multinacional = false; }
+                if (r == "sim"){ 
+                    pessoa.multinacional = (true);
+                    ArquivoPessoa.addbool(pessoa.multinacional);
+                }
+                else { 
+                    pessoa.multinacional = false;
+                    ArquivoPessoa.addbool(pessoa.multinacional);
+                }
 
                 Console.WriteLine("Informe o tipo de empresa: ");
                 pessoa.tipoEmpresa = Console.ReadLine();
@@ -74,18 +80,31 @@ namespace CompFixx
             {
                 Fisica pessoa = new Fisica();
                 Console.WriteLine("Digite o nome do cliente: ");
-                pessoa.nomePessoa = Console.ReadLine();
+                pessoa.nomePessoa = ("Nome: "+Console.ReadLine());
+                ArquivoPessoa.addText(pessoa.nomePessoa);
+
                 //Console.WriteLine(pessoa.nomePessoa);
                 Console.WriteLine("Digite o numero do cliente: ");
-                pessoa.numeroPessoa = Console.ReadLine();
+                pessoa.numeroPessoa = ("Numero: "+Console.ReadLine());
+                ArquivoPessoa.addText(pessoa.numeroPessoa);
+
                 Console.WriteLine("Digite o endereço do cliente: ");
-                pessoa.enderecoPessoa = Console.ReadLine();
+                pessoa.enderecoPessoa = ("Endereço: "+Console.ReadLine());
+                ArquivoPessoa.addText(pessoa.enderecoPessoa+"\nIdade: ");
+
                 Console.WriteLine("Digite a idade do cliente: ");
                 pessoa.idade = Convert.ToInt32(Console.ReadLine());
+                ArquivoPessoa.addint(pessoa.idade);                
+
                 Console.WriteLine("Digite o rg do cliente: ");
-                pessoa.rg = Console.ReadLine();
+                pessoa.rg = ("RG: "+Console.ReadLine());
+                ArquivoPessoa.addText(pessoa.rg);
+
                 Console.WriteLine("Nacionalidade do cliente: ");
                 pessoa.nacionalidade = Console.ReadLine();
+                ArquivoPessoa.addText(pessoa.nacionalidade);
+                
+
             }
 
             //Identificando dispositivo

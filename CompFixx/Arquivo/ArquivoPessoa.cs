@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using CompFixx.Models;
 
 namespace CompFixx.Arquivo
 {
@@ -37,6 +38,7 @@ namespace CompFixx.Arquivo
 
             
         }
+               
         public static void addint(int num)
         {
 
