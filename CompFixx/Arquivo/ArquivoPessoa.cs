@@ -12,7 +12,7 @@ namespace CompFixx.Arquivo
     {
         public static void criar() 
         {
-            string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\Banco de Dados.txt";
+            string path = @"C:\Users\Public\Banco de Dados.txt";
             
             if (!File.Exists(path))
             {
@@ -28,7 +28,7 @@ namespace CompFixx.Arquivo
         public static void addText(string text)
         {
                        
-            string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\Banco de Dados.txt";
+            string path = @"C:\Users\Public\Banco de Dados.txt";
 
             using (StreamWriter sw = File.AppendText(path))
             {
@@ -39,32 +39,7 @@ namespace CompFixx.Arquivo
             
         }
                
-        public static void addint(int num)
-        {
-
-            string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\Banco de Dados.txt";
-
-            using (StreamWriter sw = File.AppendText(path))
-            {
-                sw.WriteLine(num);
-
-            }
-
-
-        }
-        public static void addbool(bool condicao)
-        {
-
-            string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\Banco de Dados.txt";
-
-            using (StreamWriter sw = File.AppendText(path))
-            {
-                sw.WriteLine(condicao);
-
-            }
-
-
-        }
+         
 
     }
 }

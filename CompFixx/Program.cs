@@ -184,7 +184,7 @@ namespace CompFixx
                         if (r == "sim") { smartwatch.leitorBiometrio = true; ArquivoPessoa.addText("Precisa de conserto de Leitor Biometrico: sim"); }
                         else { smartwatch.leitorBiometrio = false; ArquivoPessoa.addText("Precisa de conserto de leitor biometrico: nao"); }
                     }
-                    Console.WriteLine(" \Obrigado, Retornamos com o valor. ");
+                    Console.WriteLine(" Obrigado, Retornamos com o valor. ");
                     break;
                 case "c":
                     Console.WriteLine("Informe se é PC (pc) ou noteboook (nb): ");
@@ -231,7 +231,7 @@ namespace CompFixx
                         Console.WriteLine("Modelo da placa mãe:");
                         computador.placaM = Console.ReadLine();
                         ArquivoPessoa.addText("Modelo da placa mae: "+computador.placaM);
-                        Console.WriteLine(" \Obrigado, Retornamos com o valor. ");
+                        Console.WriteLine(" Obrigado, Retornamos com o valor. ");
                     }
                     if (d == "nb")
                     {
@@ -271,7 +271,7 @@ namespace CompFixx
                         notebook.marca = Console.ReadLine();
                         ArquivoPessoa.addText("Marca do notebook: "+notebook.marca);
                     }
-                    Console.WriteLine(" \Obrigado, Retornamos com o valor. ");
+                    Console.WriteLine(" Obrigado, Retornamos com o valor. ");
                     break;
                 case "m":
                     Monitor monitor = new Monitor();
@@ -281,7 +281,7 @@ namespace CompFixx
                     Console.WriteLine("Tamanho da tela:");
                     monitor.tamanhoTela = double.Parse(Console.ReadLine());
                     ArquivoPessoa.addText("Tamanho do monitor: " + monitor.tamanhoTela);
-                    Console.WriteLine(" \Obrigado, Retornamos com o valor. ");
+                    Console.WriteLine(" Obrigado, Retornamos com o valor. ");
                     break;
                 default:
                     Console.WriteLine("Valor inválido");
