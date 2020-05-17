@@ -9,17 +9,16 @@ namespace CompFixx.Arquivo
 {
     class ArquivoPessoa
     {
-        public static void puxaNome() 
+        public static void criar() 
         {
-            string aux = Console.ReadLine();
-            string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\File.txt";
+            string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\Banco de Dados.txt";
             
             if (!File.Exists(path))
             {
                 
                 using (StreamWriter sw = File.CreateText(path))
                 {
-                    sw.WriteLine(" ");
+                    sw.WriteLine("Dados do Cliente: ");
 
                 }
             }
@@ -28,25 +27,15 @@ namespace CompFixx.Arquivo
         public static void addText()
         {
             string aux = Console.ReadLine();
-            string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\" + aux + ".txt";
-            
-            // This text is always added, making the file longer over time
-            // if it is not deleted.
+            string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\Banco de Dados.txt";
+
             using (StreamWriter sw = File.AppendText(path))
             {
-                sw.WriteLine(aux+"   ");
+                sw.WriteLine(aux+"/n   ");                
                 
             }
 
-            // Open the file to read from.
-            using (StreamReader sr = File.OpenText(path))
-            {
-                string s = "";
-                while ((s = sr.ReadLine()) != null)
-                {
-                    Console.WriteLine(s);
-                }
-            }
+            
         }
             
     }
