@@ -24,19 +24,45 @@ namespace CompFixx.Arquivo
             }
 
         }
-        public static void addText()
+        public static void addText(string text)
         {
-            string aux = Console.ReadLine();
+                       
             string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\Banco de Dados.txt";
 
             using (StreamWriter sw = File.AppendText(path))
             {
-                sw.WriteLine(aux+"/n   ");                
+                sw.WriteLine(text);                
                 
             }
 
             
         }
-            
+        public static void addint(int num)
+        {
+
+            string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\Banco de Dados.txt";
+
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine(num);
+
+            }
+
+
+        }
+        public static void addbool(bool condicao)
+        {
+
+            string path = @"C:\Users\Heric\source\repos\CompFixx\CompFixx\bin\Debug\Banco de Dados.txt";
+
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine(condicao);
+
+            }
+
+
+        }
+
     }
 }
