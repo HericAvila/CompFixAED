@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CompFixx.Models
 {
-    class Notebook: Maquina
+    class Dispositivo_Movel
     {
-        public double tamanhoTela { get; set; }
-        public bool bateriaRemovivel { get; set; }
+        public bool tela { get; set; }
+        public string sistemaOperacional { get; set; }
         public string marca { get; set; }
-
 
     }
 }

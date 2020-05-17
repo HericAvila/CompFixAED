@@ -1,4 +1,5 @@
-﻿using CompFixx.Models;
+﻿using CompFixx.Arquivo;
+using CompFixx.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,8 @@ namespace CompFixx
        
         static void Main(string[] args)
         {
-      
+            
+          //  CriarArquivo();
         }
     }
 }

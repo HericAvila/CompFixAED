@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompFixx.Models
 {
-    class Celular_tablet
+    class Celular_tablet:Dispositivo_Movel
     {
         public bool chip { get; set; }
         public string tipoEntrada { get; set; }

@@ -43,8 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arquivo\CriarArquivo.cs" />
     <Compile Include="Models\Celular-tablet.cs" />
-    <Compile Include="Models\Dispositivo.cs" />
+    <Compile Include="Models\Dispositivo Movel.cs" />
     <Compile Include="Models\Fisica.cs" />
     <Compile Include="Models\Juridica.cs" />
     <Compile Include="Models\Maquina.cs" />

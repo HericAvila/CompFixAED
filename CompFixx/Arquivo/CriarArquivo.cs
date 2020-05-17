@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CompFixx.Models
+namespace CompFixx.Arquivo
 {
-    class Dispositivo
+    class CriarArquivo
     {
-        public string marca { get; set; }
+
     }
 }

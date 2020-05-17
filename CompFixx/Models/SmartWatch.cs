@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompFixx.Models
 {
-    class SmartWatch
+    class SmartWatch:Dispositivo_Movel
     {
         public bool leitorBiometrio { get; set; }
     }

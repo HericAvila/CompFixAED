@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CompFixx.Models
 {
-    class PC
+    class PC: Maquina   
     {
         public int fonte { get; set; }
-        public bool leitor { get; set; }
+        public bool leitorOptico { get; set; }
         public string placaM { get; set; }
     }
 }
