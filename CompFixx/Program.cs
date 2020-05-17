@@ -12,7 +12,7 @@ namespace CompFixx
        
         static void Main(string[] args)
         {
-        Pessoa 
+      
         }
     }
 }

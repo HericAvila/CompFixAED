@@ -43,9 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Celular-tablet.cs" />
+    <Compile Include="Models\Dispositivo.cs" />
     <Compile Include="Models\Fisica.cs" />
     <Compile Include="Models\Juridica.cs" />
+    <Compile Include="Models\Maquina.cs" />
+    <Compile Include="Models\Monitor.cs" />
+    <Compile Include="Models\Notebook.cs" />
+    <Compile Include="Models\PC.cs" />
     <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\SmartWatch.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
