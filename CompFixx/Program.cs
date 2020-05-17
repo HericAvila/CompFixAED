@@ -184,7 +184,7 @@ namespace CompFixx
                         Console.WriteLine("Modelo da placa mãe:");
                         computador.placaM = Console.ReadLine();
                     }
-                    if (d == "pc")
+                    if (d == "nb")
                     {
                         Notebook notebook = new Notebook();
                         Console.WriteLine("Modelo da placa de vídeo:");
