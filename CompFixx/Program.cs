@@ -89,7 +89,7 @@ namespace CompFixx
                     while ((d != "ct") && (d != "sw"))
                     {
                         Console.WriteLine("Valor inválido, digite novamente ");
-                        r = Console.ReadLine();
+                        d = Console.ReadLine();
                     }
                     if (d == "ct")
                     {
@@ -122,7 +122,107 @@ namespace CompFixx
                     if (d == "sw")
                     {
                         SmartWatch smartwatch = new SmartWatch();
+                        Console.WriteLine("Precisa de concerto de tela? (sim/nao) ");
+                        r = Console.ReadLine();
+                        while ((r != "sim") && (r != "nao"))
+                        {
+                            Console.WriteLine("Valor inválido, digite novamente ");
+                            r = Console.ReadLine();
+                        }
+                        if (r == "sim") { smartwatch.tela = true; }
+                        else { smartwatch.tela = false; }
+                        Console.WriteLine("Sistema operacional do dispositivo: ");
+                        smartwatch.sistemaOperacional = Console.ReadLine();
+                        Console.WriteLine("Precisa de concerto no leitor biométrico? (sim/nao) ");
+                        r = Console.ReadLine();
+                        while ((r != "sim") && (r != "nao"))
+                        {
+                            Console.WriteLine("Valor inválido, digite novamente ");
+                            r = Console.ReadLine();
+                        }
+                        if (r == "sim") { smartwatch.leitorBiometrio = true; }
+                        else { smartwatch.leitorBiometrio = false; }
                     }
+                    break;
+                case "c":
+                    Console.WriteLine("Informe se é PC (pc) ou noteboook (nb): ");
+                    d = Console.ReadLine();
+                    while ((d != "pc") && (d != "nb"))
+                    {
+                        Console.WriteLine("Valor inválido, digite novamente ");
+                        d = Console.ReadLine();
+                    }
+                    if (d == "pc")
+                    {
+                        PC computador = new PC();
+                        Console.WriteLine("Modelo da placa de vídeo:");
+                        computador.placaV = Console.ReadLine();
+                        Console.WriteLine("Modelo do processador:");
+                        computador.processador = Console.ReadLine();
+                        Console.WriteLine("Quantidade de memória ram:");
+                        computador.ram = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Está oxidado? (sim/nao) ");
+                        r = Console.ReadLine();
+                        while ((r != "sim") && (r != "nao"))
+                        {
+                            Console.WriteLine("Valor inválido, digite novamente ");
+                            r = Console.ReadLine();
+                        }
+                        if (r == "sim") { computador.oxidacao = true; }
+                        else { computador.oxidacao = false; }
+                        Console.WriteLine("Potência da fonte:");
+                        computador.fonte = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Problema no driver optico? (sim/nao) ");
+                        r = Console.ReadLine();
+                        while ((r != "sim") && (r != "nao"))
+                        {
+                            Console.WriteLine("Valor inválido, digite novamente ");
+                            r = Console.ReadLine();
+                        }
+                        if (r == "sim") { computador.leitorOptico = true; }
+                        else { computador.leitorOptico = false; }
+                        Console.WriteLine("Modelo da placa mãe:");
+                        computador.placaM = Console.ReadLine();
+                    }
+                    if (d == "pc")
+                    {
+                        Notebook notebook = new Notebook();
+                        Console.WriteLine("Modelo da placa de vídeo:");
+                        notebook.placaV = Console.ReadLine();
+                        Console.WriteLine("Modelo do processador:");
+                        notebook.processador = Console.ReadLine();
+                        Console.WriteLine("Quantidade de memória ram:");
+                        notebook.ram = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Está oxidado? (sim/nao) ");
+                        r = Console.ReadLine();
+                        while ((r != "sim") && (r != "nao"))
+                        {
+                            Console.WriteLine("Valor inválido, digite novamente ");
+                            r = Console.ReadLine();
+                        }
+                        if (r == "sim") { notebook.oxidacao = true; }
+                        else { notebook.oxidacao = false; }
+                        Console.WriteLine("Tamanho da tela no notebook:");
+                        notebook.tamanhoTela = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Bateria com problema? (sim/nao) ");
+                        r = Console.ReadLine();
+                        while ((r != "sim") && (r != "nao"))
+                        {
+                            Console.WriteLine("Valor inválido, digite novamente ");
+                            r = Console.ReadLine();
+                        }
+                        if (r == "sim") { notebook.bateria = true; }
+                        else { notebook.bateria = false; }
+                        Console.WriteLine("Marca do notebook:");
+                        notebook.marca = Console.ReadLine();
+                    }
+                    break;
+                case "m":
+                    Monitor monitor = new Monitor();
+                    Console.WriteLine("Tipo de monitor:");
+                    monitor.tipo = Console.ReadLine();
+                    Console.WriteLine("Tamanho da tela:");
+                    monitor.tamanhoTela = double.Parse(Console.ReadLine());
                     break;
                 default:
                     Console.WriteLine("Valor inválido");
