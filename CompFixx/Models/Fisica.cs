@@ -8,7 +8,7 @@ namespace CompFixx.Models
 {
     public class Fisica : Pessoa
     {
-        public int idade { get; set; }
+        public string idade { get; set; }
         public string rg { get; set; }
         public string nacionalidade { get; set; }
     }
