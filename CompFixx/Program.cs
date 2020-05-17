@@ -15,6 +15,7 @@ namespace CompFixx
        
         static void Main(string[] args)
         {
+            double precoFinal = 0;
             ArquivoPessoa.criar();
             //identificando tipo de pessoa
             string r;
@@ -23,8 +24,7 @@ namespace CompFixx
             while((r != "fisica") && (r != "juridica"))
             {
                 Console.WriteLine("valor inválido, digite novamente: ");
-                r = Console.ReadLine();
-               
+                r = Console.ReadLine();           
             }
 
             //Adicionando dados da pessoa
@@ -102,7 +102,7 @@ namespace CompFixx
                 Console.WriteLine("Nacionalidade do cliente: ");
                 pessoa.nacionalidade = Console.ReadLine();
                 ArquivoPessoa.addText("Nacionalidade: " + pessoa.nacionalidade);
-                
+                precoFinal = precoFinal - 5;
 
             }
 
