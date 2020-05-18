@@ -16,6 +16,7 @@ namespace CompFixx
        
         static void Main(string[] args)
         {
+            
             double precoFinal = 0;
             ArquivoPessoa.criar();
             //identificando tipo de pessoa
@@ -130,7 +131,7 @@ namespace CompFixx
                     }
                     if (d == "ct")
                     {
-                        ArquivoPessoa.addText("Celular/Tablet: ");
+                        ArquivoPessoa.addText("Dispositivo móvel: Celular/Tablet");
                         Celular_tablet dispositivo = new Celular_tablet();
                         Console.WriteLine("Precisa de concerto de tela? (sim/nao) ");
                         r = Console.ReadLine();
@@ -332,6 +333,20 @@ namespace CompFixx
                 Console.WriteLine("Desculpe, mas parece que não podemos resolver seu problema");
             }
             Console.WriteLine("Preço Final = " + precoFinal);
+            Console.WriteLine("\n");
+
+            string procurar = "";
+            Console.WriteLine("Dejesa ver o cadastro de algum cliente? Digite o nome:");
+            procurar = Console.ReadLine();
+
+            bool achou = Leitura.ler(procurar);
+            while(achou == false)
+            {
+                Console.WriteLine("Dejesa ver o cadastro de algum cliente? Digite o nome:");
+                procurar = Console.ReadLine();
+                achou = Leitura.ler(procurar);
+            }
+
             Console.ReadKey();
         }
     }

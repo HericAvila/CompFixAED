@@ -9,22 +9,47 @@ namespace CompFixx.Arquivo
 {
     class Leitura
     {
-        public static void ler()
+        public static bool ler(string nome)
         {
             try
             {   // Open the text file using a stream reader.
-                using (StreamReader sr = new StreamReader("TestFile.txt"))
+                bool flag = false;
+                int contador = 0;
+                string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Public\Banco de Dados.txt");
+                foreach (var line in lines)
                 {
-                    // Read the stream to a string, and write the string to the console.
-                    String line = sr.ReadToEnd();
-                    Console.WriteLine(line);
+                    if(line.Contains(nome))
+                    {
+                        flag = true;
+                                                
+                    }
+                    if (flag)
+                    {
+                        Console.WriteLine(line);
+                        ++contador;
+                        if (contador == 12) break;
+                    }
+                    
+                   
+                    
                 }
+                if(flag == false)
+                {
+                    Console.WriteLine("Esse cliente nao consta no banco de dados.");
+                    return false;
+                }
+                
+                
+                
+                
+             
             }
             catch (IOException e)
             {
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
+            return true;
         }
     }
 }
