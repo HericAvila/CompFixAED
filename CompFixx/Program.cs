@@ -37,6 +37,10 @@ namespace CompFixx
                 pessoa.nomePessoa = (Console.ReadLine());
                 ArquivoPessoa.addText("Nome: " + pessoa.nomePessoa);
 
+                Console.WriteLine("Digite o cnpj do cliente: ");
+                pessoa.cnpj = (Console.ReadLine());
+                ArquivoPessoa.addText("cnpj: " + pessoa.nomePessoa);
+
 
                 Console.WriteLine("Digite o numero do cliente: ");
                 pessoa.numeroPessoa = (Console.ReadLine());
@@ -81,6 +85,10 @@ namespace CompFixx
             else
             {
                 Fisica pessoa = new Fisica();
+                Console.WriteLine("Digite o nome do cliente: ");
+                pessoa.cpf = (Console.ReadLine());
+                ArquivoPessoa.addText("cpf: " + pessoa.nomePessoa);
+
                 Console.WriteLine("Digite o nome do cliente: ");
                 pessoa.nomePessoa = (Console.ReadLine());
                 ArquivoPessoa.addText("Nome: " + pessoa.nomePessoa);

@@ -9,6 +9,7 @@ namespace CompFixx.Models
 {
     public class Juridica : Pessoa 
     {
+        public string cnpj { get; set }
         public string razaoSocial { get; set; }
         public string cnae { get; set; }
         public bool multinacional { get; set; }
